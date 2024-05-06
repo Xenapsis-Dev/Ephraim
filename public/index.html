@@ -15,9 +15,11 @@
 
 <body>
 
-    <div id="buttons" class="buttons flex flex-row gap-2">
-        <button id="tab1" onclick="tab1()">New Tab</button>
-        <button onclick="createtab()" id="plus">+</button>
+    <div id="buttons" class="buttons flex flex-row gap-2 my-6">
+        <div class="tabholder tabholder1">
+            <button id="tab1" onclick="tab1()" class="tab">New Tab</button>
+            <button onclick="createtab()" class="plus" id="plus">+</button>
+        </div>
     </div>
     <div id="iframecontainer" class="iframecontainer">
         <iframe src="proxy.html" id="iframe1"class="flex justify-center items-center" style="width: 90%; height: 90%;"></iframe>

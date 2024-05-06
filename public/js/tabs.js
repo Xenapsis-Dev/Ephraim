@@ -50,12 +50,14 @@ function createtab(e) {
     document.getElementById('iframecontainer').appendChild(iframe);
     let tabholder = document.createElement('div')
     tabholder.setAttribute('class', 'tabholder' + iframes.length)
+    tabholder.setAttribute("class", "tabholder")
     tabholder.setAttribute('id', 'tabholder' + iframes.length)
     document.getElementById('buttons').appendChild(tabholder)
     let newtab = document.createElement('button');
     newtab.innerHTML = "New Tab " + iframes.length ++;
     newtab.onclick = switchtab;
     newtab.setAttribute("id", "tab" + iframes.length)
+    newtab.setAttribute("class", "tab")
     let closetab = document.createElement('button')
     closetab.onclick = closetabs;
     closetab.innerHTML = "X"
@@ -70,6 +72,7 @@ function createtab(e) {
     let newplus = document.createElement('button');
     newplus.innerHTML = "+"
     newplus.setAttribute("id", "plus")
+    newplus.setAttribute("class", "plus")
     newplus.onclick = createtab;
     document.getElementById('buttons').appendChild(newplus)
 
