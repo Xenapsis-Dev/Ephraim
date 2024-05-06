@@ -8,6 +8,8 @@ import { fileURLToPath } from "url";
 
 const app = express();
 
+
+
 app.use(express.static('public'));
 
 const publicPath = fileURLToPath(new URL("public", import.meta.url));
