@@ -18,6 +18,7 @@
 
 body {
     height: 100vh;
+    background-color: #1a1a1a;
 }
 
 * {
@@ -62,7 +63,6 @@ nav {
 }
 
 .buttons {
-    margin-top: 20px;
 }
 
 .X {
@@ -81,7 +81,21 @@ nav {
     font-size: 25px;
 }
 
+.tabb {
+    margin-left: 5px;
+    font-size: 25px;
+}
+
 .tabholder {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: green;
+    border-radius: 15px;
+}
+
+.tabholderr {
+    display: flex;
+    flex-wrap: nowrap;
     background-color: green;
     border-radius: 15px;
 }
