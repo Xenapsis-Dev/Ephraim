@@ -5,13 +5,28 @@ function closetab(e) {
     let xnum = e.target.id.substring(1)
     document.getElementById('tabholder' + xnum).remove()
     document.getElementById('iframe' + xnum).remove()
+    for (var i = 0; i < iframes.length; i++) {
+        iframes[i].style.display = 'none'
+    }
+    try {  
+        document.getElementById('iframe' + (xnum - 1)).style.display = 'block'
+    }   catch {
+        document.getElementById('iframe-1').style.display = 'block'
+    }
     tabsactive -= 1
 }
 function switchtab(e) {
     let tabnum = e.target.id.substring(3)
+    let tabholders = document.querySelectorAll(".tabholder")
     for (var i = 0; i < iframes.length; i++) {
         iframes[i].style.display = 'none'
     }
+    for (var i = 0; i < tabholders.length; i++) {
+        let i1 = i + 1
+        tabholders[i].style.backgroundColor = "#1a1a1a"
+    }
+    document.querySelector('.tabholderr').style.backgroundColor = "#1a1a1a"
+    tabholders[tabnum - 1].style.backgroundColor = "#4d4d4d"
     iframes[tabnum].style.display = 'block'
 }
 
@@ -19,14 +34,26 @@ function tab1() {
     for (var i = 0; i < iframes.length; i++) {
         iframes[i].style.display = 'none'
     }
+    let tabholders = document.querySelectorAll(".tabholder")
+    for (var i = 0; i < tabholders.length; i++) {
+        let i1 = i + 1
+        tabholders[i].style.backgroundColor = "#1a1a1a"
+    }
+    document.querySelector('.tabholderr').style.backgroundColor = "#4d4d4d"
     document.getElementById('iframe-1').style.display = 'block'
 }
 
 
 function newholder() {
+    let tabholders = document.querySelectorAll(".tabholder")
+    for (var i = 0; i < tabholders.length; i++) {
+        let i1 = i + 1
+        tabholders[i].style.backgroundColor = "#1a1a1a"
+    }
     let tabholder = document.createElement('div')
     tabholder.id = "tabholder" + tabsactive
     tabholder.setAttribute("class", "tabholder")
+    tabholder.style.backgroundColor = "#4d4d4d"
     document.getElementById("buttons").appendChild(tabholder)
     let tab = document.createElement('button')
     tab.id = "tab" + tabsactive
@@ -66,10 +93,11 @@ function createtab() {
     newframe.id = "iframe" + tabsactive
     newframe.setAttribute("class", "proxyframe")
     newframe.src = "/proxy.html"
+    newframe.classList.add("rounded-xl")
     document.getElementById("iframecontainer").appendChild(newframe)
     tabsactive += 1
     console.log(tabsactive)
-
+    let tabholders = document.querySelectorAll(".tabholder")
 }
 
 setInterval(() => {
@@ -101,6 +129,14 @@ setInterval(() => {
     for (var i = 0; i < tabsactive; i++) {
         try {
             frames[i].id = "iframe" + (i + 1)
+        } catch {
+
+        }
+    }
+    for (var i = 0; i < tabsactive; i++) {
+        try {
+            const iframedoc = document.getElementById('iframe' + (i + 1)).contentWindow.document
+            tabs[i].innerHTML = iframedoc.title
         } catch {
 
         }
