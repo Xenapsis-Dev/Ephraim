@@ -136,7 +136,12 @@ setInterval(() => {
     for (var i = 0; i < tabsactive; i++) {
         try {
             const iframedoc = document.getElementById('iframe' + (i + 1)).contentWindow.document
-            tabs[i].innerHTML = iframedoc.title
+            let iframetitle = iframedoc.title
+            if (iframetitle.length > 20) {
+                iframetitle = iframetitle.substring(0, 10);
+                iframetitle = iframetitle + "..."
+            }
+            tabs[i].innerHTML = iframetitle;
         } catch {
 
         }
