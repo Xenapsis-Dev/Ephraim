@@ -143,7 +143,11 @@ setInterval(() => {
             }
             tabs[i].innerHTML = iframetitle;
             let iframe1title = document.getElementById('iframe-1').contentWindow.document.title
-            document.getElementById('nottab1').innerHTML
+            if (iframe1title.length > 20) {
+                iframe1title = iframe1title.substring(0, 10);
+                iframe1title = iframe1title + "..."
+            }
+            document.getElementById('nottab1').innerHTML = iframe1title
         } catch {
 
         }
