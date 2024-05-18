@@ -32,6 +32,15 @@ body {
     height: 40px;
     font-family: Alte;
     font-size: 30px;
+    border-radius: 4px;
+    transition-duration: 500ms;
+}
+
+.search-input:focus {
+    width: 500px;
+    height: 40px;
+    font-family: Alte;
+    font-size: 30px;
     border-radius: 15px;
 }
 
@@ -101,6 +110,13 @@ nav {
 
 }
 
+.back {
+    font-family: Alte;
+    font-size: 40px;
+    width: 25px;
+    height: 25px;
+}
+
 .tabholder {
     display: flex;
     flex-wrap: nowrap;
@@ -123,6 +139,10 @@ nav {
     z-index: -1;
     filter: blur(3px);
     animation: rotating 4s linear infinite;
+}
+
+.uv-form {
+
 }
 
 .tabholderr {

@@ -154,3 +154,30 @@ setInterval(() => {
     }
 }, 100);
 
+function back() {
+    console.log(iframes);
+    for (var i = 0; i < iframes.length; i++) {
+        if (window.getComputedStyle(iframes[i]).display === "block") {
+            iframes[i].contentWindow.history.back();
+        }
+    }
+}
+
+function forward() {
+    console.log(iframes);
+    for (var i = 0; i < iframes.length; i++) {
+        if (window.getComputedStyle(iframes[i]).display === "block") {
+            iframes[i].contentWindow.history.forward();
+        }
+    }
+}
+
+function refresh() {
+    console.log(iframes);
+    for (var i = 0; i < iframes.length; i++) {
+        if (window.getComputedStyle(iframes[i]).display === "block") {
+            iframes[i].contentWindow.location.reload();
+        }
+    }
+}
+
