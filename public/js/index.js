@@ -15,8 +15,25 @@ form.addEventListener("submit", async (event) => {
     let iframes = document.getElementsByTagName('iframe')
     for (var i = 0; i < iframes.length; i++) {
         if (window.getComputedStyle(iframes[i]).display === "block") {
-            let url = search(address.value, searchEngine.value);
+            var url = address.value.trim();
+            if(reurl(url) != true) {
+                url = searchEngine.value + address.value.trim()
+            } else {
+                url = search(address.value.trim())
+            }
             iframes[i].src = __uv$config.prefix + __uv$config.encodeUrl(url);
         }
     }
   });
+
+  function reurl(urll) {
+    if (urll.startsWith("https://") || urll.startsWith("http://") || urll.includes(".")) {
+        console.log('url')
+        console.log(urll)
+        return true;
+    } else {
+        console.log('not url')
+        return false;
+
+    }
+  }
