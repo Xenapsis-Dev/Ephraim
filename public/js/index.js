@@ -27,13 +27,6 @@ form.addEventListener("submit", async (event) => {
   });
 
   function reurl(urll) {
-    if (urll.startsWith("https://") || urll.startsWith("http://") || urll.includes(".")) {
-        console.log('url')
-        console.log(urll)
-        return true;
-    } else {
-        console.log('not url')
-        return false;
-
-    }
+    if (urll.startsWith("https://") || urll.startsWith("http://") || urll.includes(".")) return true;
+    return false;
   }
