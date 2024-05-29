@@ -19,7 +19,6 @@
 body {
     height: 100vh;
     background-color: #1a1a1a;
-    overflow-y: hidden;
 }
 
 * {
@@ -28,7 +27,7 @@ body {
     font-family: Alte;
 }
 .search-input {
-    width: 500px;
+    width: 100%;
     height: 40px;
     font-family: Alte;
     font-size: 30px;
@@ -36,12 +35,35 @@ body {
     transition-duration: 500ms;
 }
 
+.searchstuff {
+    width: 90%;
+    
+}
+
+.uv-form {
+    width: 100%;
+}
+
 .search-input:focus {
-    width: 500px;
+    width: 100%;
     height: 40px;
     font-family: Alte;
     font-size: 30px;
     border-radius: 15px;
+}
+
+.settingsholder {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 25%;
+}
+
+.settings {
+    width: 100%;
+    float: right;
+    height: 100%;
+    background-color: rgb(140, 219, 146);
 }
 
 .titlee {
@@ -97,6 +119,7 @@ nav {
 .tab {
     margin-left: 5px;
     font-size: 25px;
+    width: auto;
     color: rgb(140, 219, 146);
 
 }
@@ -104,10 +127,17 @@ nav {
 .tabb {
     margin-left: 10px;
     font-size: 25px;
+    width: fit-content;
     border: 5px;
     margin-right: 10px;
     color: rgb(140, 219, 146);
 
+}
+
+.settingsbutton {
+    width: 25%;
+    font-size: 30px;
+    color: rgb(140, 219, 146);
 }
 
 .back {

@@ -11,7 +11,6 @@ form.addEventListener("submit", async (event) => {
     } catch (err) {
         console.log(err)
     }
-    console.log()
     let iframes = document.getElementsByTagName('iframe')
     for (var i = 0; i < iframes.length; i++) {
         if (window.getComputedStyle(iframes[i]).display === "block") {
@@ -22,6 +21,7 @@ form.addEventListener("submit", async (event) => {
                 url = search(address.value.trim())
             }
             iframes[i].src = __uv$config.prefix + __uv$config.encodeUrl(url);
+            
         }
     }
   });
