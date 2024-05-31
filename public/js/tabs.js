@@ -183,3 +183,12 @@ function refresh() {
     }
 }
 
+function settings() {
+    console.log("settings opened")
+    for (var i = 0; i < iframes.length; i++) {
+        if (window.getComputedStyle(iframes[i]).display === "block") {
+            iframes[i].src = "/settings.html"
+        }
+    }
+} 
+
