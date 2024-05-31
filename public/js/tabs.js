@@ -93,7 +93,7 @@ function createtab() {
     newframe.id = "iframe" + tabsactive
     newframe.setAttribute("class", "proxyframe")
     newframe.src = "/proxy.html"
-    let tab1 = document.getElementById('nottab1')
+    let tab1 = document.getElementById('tabholderr')
     tab1.style.backgroundColor = "#1a1a1a"
     newframe.classList.add("rounded-xl")
     document.getElementById("iframecontainer").appendChild(newframe)

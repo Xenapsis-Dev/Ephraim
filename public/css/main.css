@@ -100,6 +100,7 @@ nav {
 
 .buttons {
     height: 50px;
+    width: 75%;
     display: flex;
     align-items: center;
 }
