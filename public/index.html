@@ -23,8 +23,8 @@
     <div style="position: relative; background-color: #272727; z-index: 3; bottom: 0px;" class="pb-3 pt-1">
         <div class="flex">
             <div id="buttons" class="buttons flex flex-nowrap flex-row gap-2 overflow-x-overlay overflow-y-hidden">
-                <div class="tabholderr">
-                    <button id="nottab1" onclick="tab1()" class="tabb">New Tab</button>
+                <div class="tabholderr" id="tabholderr">
+                    <button id="nottab1" onclick="tab1()" class="tabb">Ephraim</button>
                 </div>
                 <button onclick="createtab()" class="plus" id="plus">+</button>
             </div>
@@ -32,14 +32,15 @@
                 <h1 id="time"></h1>
             </div>
             <div class="flex justify-end" style="width: 40%;">
-                <button class="back mt-3 mr-3" onclick="erudaa()"><img src="imgs/console.png"></button>
-                <button class="back mt-3 mr-3" onclick="fullscreen()"><img src="imgs/fullscreen.png"></button>
+                <button class="back mt-3 mr-3 fullscreenicon" onclick="popout()"><img src="imgs/popout.png"></button>
+                <button class="back mt-3 mr-3 fullscreenicon" onclick="erudaa()"><img src="imgs/console.png"></button>
+                <button class="back mt-3 mr-3 fullscreenicon" onclick="fullscreen()"><img src="imgs/fullscreen.png"></button>
             </div>
         </div>
         <div class="flex justify-evenly items-center flex-nowrap flex-row">
             <div class="controls flex flex-nowrap gap-3 ml-3 mr-3">
                 <button class="back" onclick="back()"><img src="imgs/back.png"></button>
-                <button class="back" onclick="refresh()"><img src="imgs/refresh.png"></button>
+                <button class="back settingsicon" onclick="refresh()"><img src="imgs/refresh.png"></button>
                 <button class="back" onclick="forward()"><img src="imgs/forward.png"></button>
             </div>
             <div class="searchstuff">
@@ -49,7 +50,7 @@
                 </form>
             </div>
             <div>
-                <button class="back mr-3 ml-3 mt-1.5"onclick="settings()"><img src="imgs/settings.png"></button>
+                <button class="back mr-3 ml-3 mt-1.5 settingsicon"onclick="settings()"><img src="imgs/settings.png"></button>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 "use strict";
 const form = document.getElementById("uv-form")
 const address = document.getElementById("uv-address")
-var searchEngine = document.getElementById("uv-search-engine").value;
+var searchEngine = document.getElementById("uv-search-engine");
 
 
 
@@ -20,12 +20,15 @@ form.addEventListener("submit", async (event) => {
             var url = address.value.trim();
             if (localStorage.getItem("engine")) {
                 var searchEngine = localStorage.getItem("engine")
-                console.log(searchEngine)
-            }
+
+            } 
             if(reurl(url) != true) {
                 url = searchEngine + address.value.trim()
+                console.log("searching")
+                console.log(searchEngine)
             } else {
                 url = search(address.value.trim())
+                console.log("going to website")
             }
             iframes[i].src = __uv$config.prefix + __uv$config.encodeUrl(url);
             

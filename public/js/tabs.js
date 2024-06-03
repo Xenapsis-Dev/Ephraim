@@ -93,7 +93,8 @@ function createtab() {
     newframe.id = "iframe" + tabsactive
     newframe.setAttribute("class", "proxyframe")
     newframe.src = "/proxy.html"
-    
+    let tab1 = document.getElementById('tabholderr')
+    tab1.style.backgroundColor = "#1a1a1a"
     newframe.classList.add("rounded-xl")
     document.getElementById("iframecontainer").appendChild(newframe)
     tabsactive += 1
@@ -195,6 +196,14 @@ function fullscreen() {
     for (var i = 0; i < iframes.length; i++) {
         if (window.getComputedStyle(iframes[i]).display === "block") {
             iframes[i].requestFullscreen();
+        }
+    }
+}
+
+function popout() {
+    for (var i = 0; i < iframes.length; i++) {
+        if (window.getComputedStyle(iframes[i]).display === "block") {
+            window.open(iframes[i].src)
         }
     }
 }

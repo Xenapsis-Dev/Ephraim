@@ -19,6 +19,7 @@
 body {
     height: 100vh;
     background-color: #1a1a1a;
+    overflow-y: hidden;
 }
 
 * {
@@ -137,6 +138,14 @@ nav {
     color: rgb(140, 219, 146); 
     font-family: Alte;
     font-size: 20px;
+    transition-duration: 250ms;
+}
+
+.time:hover {
+    width: 20%; 
+    color: rgb(140, 219, 146); 
+    font-family: Alte;
+    font-size: 25px;
 }
 
 .tabb {
@@ -190,13 +199,69 @@ nav {
 
 }
 
+.fullscreenicon {
+    transition-duration: 250ms;
+    font-family: Alte;
+    font-size: 40px;
+    width: 25px;
+    height: 25px;
+}
+
+.fullscreenicon:hover {
+    transition-duration: 250ms;
+    font-family: Alte;
+    font-size: 40px;
+    width: 30px;
+    height: 25px;
+}
+
+.settingsicon {
+    transition-duration: 250ms;
+    font-family: Alte;
+    font-size: 40px;
+    width: 25px;
+    height: 25px;
+}
+
+.settingsicon:hover {
+    rotate: 360deg;
+    font-family: Alte;
+    font-size: 40px;
+    width: 25px;
+    height: 25px;
+}
+
 .tabholderr {
     display: flex;
     flex-wrap: nowrap;
     border-radius: 15px;
     position: relative;
     margin-left: 20px;
-    background-color: #1a1a1a;
+    background-color: #4d4d4d;
+    justify-content: center;
+    align-items: center;
+    height: 37.5px;
+}
+
+.tabholderr:hover {
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 15px;
+    position: relative;
+    margin-left: 20px;
+    background-color: #6e6e6e;
+    justify-content: center;
+    align-items: center;
+    height: 37.5px;
+}
+
+.tabholder:hover {
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 15px;
+    position: relative;
+    margin-left: 20px;
+    background-color: #3d3d3d;
     justify-content: center;
     align-items: center;
     height: 37.5px;
