@@ -18,7 +18,7 @@
 
 body {
     height: 100vh;
-    background-color: #1a1a1a;
+    background-color: #0f0f0f;
     overflow-y: hidden;
 }
 
@@ -110,6 +110,7 @@ nav {
     height: 55px;
     width: 40%;
     display: flex;
+    z-index: 3;
     align-items: center;
 }
 
