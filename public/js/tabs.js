@@ -26,7 +26,7 @@ function switchtab(e) {
         tabholders[i].style.backgroundColor = "#1a1a1a"
     }
     document.querySelector('.tabholderr').style.backgroundColor = "#1a1a1a"
-    tabholders[tabnum - 1].style.backgroundColor = "#4d4d4d"
+    tabholders[tabnum - 1].style.backgroundColor = "#363434"
     iframes[tabnum].style.display = 'block'
 }
 
@@ -39,7 +39,7 @@ function tab1() {
         let i1 = i + 1
         tabholders[i].style.backgroundColor = "#1a1a1a"
     }
-    document.querySelector('.tabholderr').style.backgroundColor = "#4d4d4d"
+    document.querySelector('.tabholderr').style.backgroundColor = "#363434"
     document.getElementById('iframe-1').style.display = 'block'
 }
 
@@ -53,7 +53,7 @@ function newholder() {
     let tabholder = document.createElement('div')
     tabholder.id = "tabholder" + tabsactive
     tabholder.setAttribute("class", "tabholder")
-    tabholder.style.backgroundColor = "#4d4d4d"
+    tabholder.style.backgroundColor = "#363434"
     document.getElementById("buttons").appendChild(tabholder)
     let tab = document.createElement('button')
     tab.id = "tab" + tabsactive

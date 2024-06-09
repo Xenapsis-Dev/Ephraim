@@ -175,13 +175,33 @@ nav {
 .tabholder {
     display: flex;
     flex-wrap: nowrap;
-    border-radius: 15px;
+    border-radius: 10px;
     position: relative;
     margin-left: 20px;
-    background-color: #1a1a1a;
+    background-color: #363434;
     justify-content: center;
     align-items: center;
-    height: 37.5px;
+    height: 30px;
+}
+
+.autobooks {
+    --shadow-color: hsl(0, 0%, 20%);
+    filter: drop-shadow( 0px 0px 20px var(--shadow-color));
+    
+}
+
+.autobooks img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #1f1e1e;
+    border-radius: 7px;
+    transition-duration: 500ms;
+}
+
+.autobooks img:hover {
+    width: 175px;
+    height: 175px;
+    transition-duration: 500ms;
 }
 
 .tabholder::after {
@@ -189,7 +209,7 @@ nav {
     position: absolute;
     height: 110%;
     width: 103%;
-    border-radius: 15px;
+    border-radius: 10px;
     background-image: repeating-conic-gradient(from var(--a), #39d5bb, #00ff80, #81ffc0);
     z-index: -1;
     filter: blur(3px);
@@ -235,45 +255,22 @@ nav {
 .tabholderr {
     display: flex;
     flex-wrap: nowrap;
-    border-radius: 15px;
+    border-radius: 10px;
     position: relative;
     margin-left: 20px;
-    background-color: #4d4d4d;
+    background-color: #363434;
     justify-content: center;
     align-items: center;
-    height: 37.5px;
+    height: 30px;
 }
 
-.tabholderr:hover {
-    display: flex;
-    flex-wrap: nowrap;
-    border-radius: 15px;
-    position: relative;
-    margin-left: 20px;
-    background-color: #6e6e6e;
-    justify-content: center;
-    align-items: center;
-    height: 37.5px;
-}
-
-.tabholder:hover {
-    display: flex;
-    flex-wrap: nowrap;
-    border-radius: 15px;
-    position: relative;
-    margin-left: 20px;
-    background-color: #3d3d3d;
-    justify-content: center;
-    align-items: center;
-    height: 37.5px;
-}
 
 .tabholderr::after {
     content: '';
     position: absolute;
     height: 114%;
     width: 105%;
-    border-radius: 15px;
+    border-radius: 10px;
     background-image: repeating-conic-gradient(from var(--a), #39d5bb, #00ff80, #81ffc0);
     z-index: -1;
     filter: blur(3px);

@@ -10,14 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/saved.js"></script>
 </head>
 
 <body>
     <div class="proxywrapper  flex items-center justify-center flex-col">
         <h1 class="titlee text-6xl mb-3">Ephraim Proxy...</h1>
   </div>
-  <div class="autobooks">
-    <div><button><img src="imgs/console.png" style="width: 150px; height: 150px;"></button></div>
+  <script>
+    function loadpage(e) {
+      let id = document.getElementById(e)
+      document.location.href = e.value
+    }
+  </script>
+  <div class="autobooks flex justify-center gap-10">
+    <div><button value="https://xenapsis.dev" id="xenapsis" onclick="loadpage(xenapsis)"><img class="autobookimg" src="imgs/favicon.png" ></button></div>
+    <div><button value="https://kipflix.vercel.app" id="fmovies" onclick="loadpage(fmovies)"><img class="autobookimg" src="imgs/console.png" ></button></div>
+    <div><button onclick=""><img class="autobookimg" src="imgs/console.png" ></button></div>
+    <div><button onclick=""><img class="autobookimg" src="imgs/console.png"></button></div>
   </div>
     <script src="/uv/uv.bundle.js"></script>
     <script src="/uv/uv.config.js"></script>
