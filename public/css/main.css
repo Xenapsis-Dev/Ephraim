@@ -38,8 +38,9 @@ body {
     width: 100%;
     background-color: #363434;
     height: 30px;
+    color: #8b8b8b;
     font-family: Alte;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 4px;
     transition-duration: 500ms;
 }

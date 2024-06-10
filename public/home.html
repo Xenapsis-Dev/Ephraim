@@ -13,5 +13,21 @@
             <button onclick="yahoo()">Yahoo</button>
             <button onclick="bing()">Bing</button>
         </div>
+        <form class="uv-form" id="f">
+            <input class="search-input text-center" id="engineset" placeholder="What engine would you like to use?">
+        </form>
+        <script>
+            const input = document.getElementById('engineset');
+    
+            function setengine() {
+                localStorage.setItem("engine", input.value);
+            }
+    
+            input.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                    setengine();
+                }
+            });
+        </script>
     </body>
 </html>
