@@ -354,12 +354,4 @@ nav {
     transition: all 500ms;
 }
 
-@media screen and (max-width: 600px) {
-    .time {
-        display: none !important;
-    }
 
-    .stuff {
-        width: 60% !important;
-    }
- }
