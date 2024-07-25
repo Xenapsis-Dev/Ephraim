@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/engine.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-    <body style="background-color: #0f0f0f">
-        <div>
-            <button onclick="duck()">duckduckgo</button>
-            <button onclick="google()">Google</button>
-            <button onclick="yahoo()">Yahoo</button>
-            <button onclick="bing()">Bing</button>
+    <body style="background-color: #0f0f0f" style="overflow-x: hidden;">
+        <h1 style="color: rgb(140, 219, 146); font-size: 25px;">Set Your Engine</h1>
+        <br>
+        <div class="flex gap-4">
+            <button onclick="duck()" class="serachenginebutton">Duckduckgo</button>
+            <button onclick="google()" class="serachenginebutton">Google</button>
+            <button onclick="yahoo()" class="serachenginebutton">Yahoo</button>
+            <button onclick="bing()" class="serachenginebutton">Bing</button>
         </div>
+        <br>
+        <br>
         <form class="uv-form" id="f">
-            <input class="search-input text-center" id="engineset" placeholder="What engine would you like to use?">
+            <input style="border: #202020 solid 3px;"class="search-input text-center" id="engineset" placeholder="What engine would you like to use? E.G. https://yandex.com/search/?text= ">
         </form>
         <script>
             const input = document.getElementById('engineset');

@@ -139,13 +139,13 @@ setInterval(() => {
         try {
             const iframedoc = document.getElementById('iframe' + (i + 1)).contentWindow.document
             let iframetitle = iframedoc.title
-            if (iframetitle.length > 20) {
+            if (iframetitle.length > 8) {
                 iframetitle = iframetitle.substring(0, 10);
                 iframetitle = iframetitle + "..."
             }
             tabs[i].innerHTML = iframetitle;
             let iframe1title = document.getElementById('iframe-1').contentWindow.document.title
-            if (iframe1title.length > 20) {
+            if (iframe1title.length > 8) {
                 iframe1title = iframe1title.substring(0, 10);
                 iframe1title = iframe1title + "..."
             }
