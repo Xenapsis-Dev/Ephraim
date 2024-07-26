@@ -362,5 +362,17 @@ nav {
     .stuff {
         width: 60% !important;
     }
+    
+    .tabholderr {
+        display: flex;
+        flex-wrap: nowrap;
+        border-radius: 10px;
+        position: relative;
+        margin-left: 10px;
+        background-color: #363434;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
 }
 
