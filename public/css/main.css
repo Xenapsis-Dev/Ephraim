@@ -360,7 +360,7 @@ nav {
     }
     
     .stuff {
-        width: 60% !important;
+        width: 50% !important;
     }
     
     .tabholderr {
@@ -374,5 +374,14 @@ nav {
         align-items: center;
         height: 30px;
     }
+    
+    .buttons {
+        height: 55px;
+        width: 50%;
+        display: flex;
+        z-index: 3;
+        align-items: center;
+    }
+
 }
 
