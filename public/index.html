@@ -15,7 +15,7 @@
     <script src="uv/uv.config.js" defer></script>
     <script src="uv/register-sw.js" defer></script>
     <script src="js/search.js" defer></script>
-    <script src="js/index.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
     <script src="js/startup.js"></script>
     <script src="js/ephraimcommands.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9LFFDHW98"></script>
@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    
     <div style="position: relative;; z-index: 3; bottom: 0px;" class="pb-3">
         <div class="flex" style="background-color: #1d1d1d">
             <div id="buttons" class="buttons flex flex-nowrap flex-row gap-2 overflow-x-overlay overflow-y-hidden">
@@ -53,9 +54,9 @@
                 <button class="back" onclick="forward()"><img src="imgs/forward.png"></button>
             </div>
             <div class="searchstuff">
-                <form class="uv-form" id="uv-form">
+                <form class="uv-form" id="uv-form" method="post">
                     <input id="uv-search-engine" value="https://google.com/search?q=" type="hidden">
-                    <input class="search-input text-center" id="uv-address" placeholder="Search the web freely...">
+                    <input class="search-input text-center"  id="uv-address" method="post" placeholder="Search the web freely..." name="search" type="text">
                 </form>
             </div>
             <div>
@@ -63,10 +64,11 @@
             </div>
         </div>
     </div>
+    
+    
     <div id="iframecontainer" class="iframecontainer flex justify-center items-center" style="height: 90%;">
         <iframe src="proxy.html" id="iframe-1"class="rounded-xl proxyframee" style="width: 90%; height: 80%;"></iframe>
     </div>
-
     </iframe>
 </body>
 </html>

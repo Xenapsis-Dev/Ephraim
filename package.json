@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "A secure way to anonymously browse the internet",
 	"main": "index.js",
-	"type": "module",
 	"scripts": {
 		"start": "node index.js",
 		"xenapsissetup": "npm i"

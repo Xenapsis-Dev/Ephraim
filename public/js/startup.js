@@ -1,15 +1,22 @@
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     registerSW();
+    
     setInterval(() => {
         let time = document.getElementById('time')
         let d = new Date();
         time.innerHTML = d.toLocaleTimeString();
     }, 1000);
-    
+    let firsttime = localStorage.getItem("first")
+    if (firsttime === null) {
+        window.location.href="./agreement.html"
+    }
 });
 
 let script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
+script.src = 'https://code.jquery.com/jquery-3.6.3.min.js';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 var erudaon = false;

@@ -6,6 +6,7 @@
 
 root {
     font-family: Alte;
+    filter: blur(4px);
 }
 
 #particles-js {
@@ -31,6 +32,7 @@ body {
     font-family: Alte;
     scrollbar-width: thin;
     scrollbar-color: rgb(140, 219, 146) transparent;
+    justify-content: space;
 }
 
 ::-moz-scrollbar-button, ::-webkit-scrollbar-button {
@@ -279,6 +281,7 @@ nav {
     height: 25px;
 }
 
+
 .settingsicon {
     transition-duration: 250ms;
     font-family: Alte;
@@ -354,4 +357,10 @@ nav {
     transition: all 500ms;
 }
 
-
+.agree {
+    font-family: Alte;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}

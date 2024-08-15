@@ -1,17 +1,13 @@
-"use strict";
 const form = document.getElementById("uv-form")
 const address = document.getElementById("uv-address")
 var searchEngine = document.getElementById("uv-search-engine");
 var searchEnginee = document.getElementById("uv-search-engine");
 
-
-
-
-form.addEventListener("submit", async (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
   
     try {
-      await registerSW();
+        registerSW();
     } catch (err) {
         console.log(err)
     }
@@ -33,12 +29,15 @@ form.addEventListener("submit", async (event) => {
                 url = search(address.value.trim())
                 console.log("going to website")
             }
+            
             iframes[i].src = __uv$config.prefix + __uv$config.encodeUrl(url);
             
         }
     }
   });
 
+  
+  
   function reurl(urll) {
     if (urll.startsWith("https://") || urll.startsWith("http://") || urll.includes(".")) return true;
     return false;
