@@ -364,3 +364,34 @@ nav {
     margin-right: 10px;
     color: white;
 }
+@media only screen and (max-width: 600px) {
+    .time {
+        display: none !important;
+    }
+    
+    .stuff {
+        width: 50% !important;
+    }
+    
+    .tabholderr {
+        display: flex;
+        flex-wrap: nowrap;
+        border-radius: 10px;
+        position: relative;
+        margin-left: 10px;
+        background-color: #363434;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
+    
+    .buttons {
+        height: 55px;
+        width: 50%;
+        display: flex;
+        z-index: 3;
+        align-items: center;
+    }
+
+}
+
