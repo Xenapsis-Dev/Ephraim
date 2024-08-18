@@ -2,9 +2,9 @@
 	"name": "Ephraim",
 	"version": "1.0.0",
 	"description": "A secure way to anonymously browse the internet",
-	"main": "index.js",
+	"main": "app.js",
 	"scripts": {
-		"start": "node index.js",
+		"start": "node app.js",
 		"xenapsissetup": "npm i"
 	},
 	"dependencies": {

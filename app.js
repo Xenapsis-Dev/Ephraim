@@ -4,21 +4,21 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json())
+
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
 
-app.post('/postrequest', (req, res) => {
-  try {
-    console.log(req.body); // Log the entire request body
-    const website = req.body.search;
-    console.log(website);
-    console.log("TEST");
-
-  } catch (err) {
-    console.log(err)
-  }
+app.get('/', (req, res) => {
+  res.status(200).json({info: 'This is a presset.'})
 });
+
+app.post('/', (req, res) => {
+    const { parcel } = req.body
+    console.log(parcel)
+    res.status(200).send({status: 'recived'})
+})
 
 // Create an HTTP server
 const httpServer = http.createServer();
@@ -41,11 +41,11 @@ httpServer.on("upgrade", (req, socket, head) => {
     socket.end();
   }
 });
-const port = 2000;
+const port = 2300;
 
 httpServer.on("listening", () => {
   console.log("HTTP server listening");
-  console.log("View your server at http://localhost:" + port);
+  console.log(`View your server at http://localhost:${port}`);
 });
 
 httpServer.listen({

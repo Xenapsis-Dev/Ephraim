@@ -22,6 +22,12 @@
         <form class="uv-form" id="f">
             <input style="border: #202020 solid 3px;"class="search-input text-center" id="engineset" placeholder="What engine would you like to use? E.G. https://yandex.com/search/?text= ">
         </form>
+        <br>
+        <br>
+        <h1 style="color: rgb(140, 219, 146); font-size: 25px;">Tracking</h1>
+        <br>
+        <button onclick="localStorage.setItem('tracking', 'true')" class="serachenginebutton">On</button>
+        <button onclick="localStorage.setItem('tracking', 'false')" class="serachenginebutton">Off</button>
         <script>
             const input = document.getElementById('engineset');
     
