@@ -24,8 +24,9 @@ app.post('/', (req, res) => {
     let search = parcel
     let now = new Date();
     let time = now.getTime();
+    
     res.status(200).send({status: 'recived'})
-    let db = new sqlite.Database('utils/rizz.db', sqlite.OPEN_READWRITE | sqlite.OPEN_CREATE);
+    let db = new sqlite.Database('utils/database.db', sqlite.OPEN_READWRITE | sqlite.OPEN_CREATE);
     db.run('CREATE TABLE IF NOT EXISTS main(Search TEXT NOT NULL, Time INTEGER NOT NULL)');
     db.run("PRAGMA busy_timeout = 30000");
     let query = `SELECT * FROM main WHERE Search = ?`
@@ -37,7 +38,6 @@ app.post('/', (req, res) => {
       if (row === undefined) {
         let insert = db.prepare(` INSERT INTO main VALUES(?,?)`)
         insert.run(search, time)
-        console.log("successfully added data into db")
         db.close;
       }
       

@@ -3,7 +3,7 @@ const address = document.getElementById("uv-address")
 var searchEngine = document.getElementById("uv-search-engine");
 var searchEnginee = document.getElementById("uv-search-engine");
 
-const baseurl = window.location.origin;
+const baseurl = window.location.origin + '/'
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
