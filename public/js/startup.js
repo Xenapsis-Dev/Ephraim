@@ -3,16 +3,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     registerSW();
-    
-    setInterval(() => {
-        let time = document.getElementById('time')
-        let d = new Date();
-        time.innerHTML = d.toLocaleTimeString();
-    }, 1000);
-    let firsttime = localStorage.getItem("first")
-    if (firsttime === null) {
-        window.location.href="./agreement.html"
-    }
 });
 
 
