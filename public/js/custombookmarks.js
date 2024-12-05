@@ -1,6 +1,6 @@
 function custombookmark() {
-    var url = window.prompt('What is the link to your website?')
-    var title = window.prompt('What is the name of the bookmark you are making? (Required)')
+    var url = window.prompt('What link would you like to bookmark?')
+    var title = window.prompt('What would you like the title of the bookmark to be? (Required)')
     var img = window.prompt('What image would you like to use for the bookmark?')
     var uvstring = "/uv/service/"
     var encodedurl = __uv$config.encodeUrl(url)
