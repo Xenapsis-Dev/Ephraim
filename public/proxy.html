@@ -26,9 +26,6 @@
       function loadpage(e) {
         let id = document.getElementById(e)
         let url = e.value
-        if (!url.startsWith("https://") && !url.startsWith("http://") {
-            let url = `https://${url}`
-        }
         let encodedurl = __uv$config.encodeUrl(url)
         let string = "/uv/service/"
         let finalurl = string + encodedurl
