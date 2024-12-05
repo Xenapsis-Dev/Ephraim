@@ -26,7 +26,7 @@
     <script>
       function loadpage(e) {
         let id = document.getElementById(e)
-        let url = e.value
+        let url = search(e.value)
         let encodedurl = __uv$config.encodeUrl(url)
         let string = "/uv/service/"
         let finalurl = string + encodedurl
