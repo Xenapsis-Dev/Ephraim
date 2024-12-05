@@ -34,27 +34,6 @@ form.addEventListener("submit", async (event) => {
     }
   });
 
-form.addEventListener("submit", postinfo)
-
-async function postinfo(e) {
-    e.preventDefault()
-    if (localStorage.getItem('tracking') != "false") {
-        let url = address.value
-        
-        const res = await fetch(baseurl, 
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    parcel: url
-                })
-        })
-        
-    }
-}
-
 
 
   
